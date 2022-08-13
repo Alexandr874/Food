@@ -130,14 +130,14 @@ window.addEventListener('DOMContentLoaded', () => {
                 item.addEventListener('click', (e) => {
                       modalContent.classList.add('show');
                       modalContent.classList.remove('hide');
-                      
+                      document.body.style.overflow = 'hidden';
                 });
           });
 
           modalCloseBtn.addEventListener('click', (e) => {
             modalContent.classList.add('hide');
             modalContent.classList.remove('show');
-            
+            document.body.style.overflow = '';
           });
 
 
