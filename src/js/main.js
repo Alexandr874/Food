@@ -86,6 +86,8 @@ window.addEventListener('DOMContentLoaded', () => {
                    timeInterval = setInterval(updateClock, 1000);
 
 
+                   updateClock();
+
 
               function updateClock() {
                 const t = getTimRimaining(endtaim);
