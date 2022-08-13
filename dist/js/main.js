@@ -184,18 +184,23 @@ window.addEventListener('DOMContentLoaded', () => {
   const modalOpenBtn = document.querySelectorAll('[data-modal]'),
         modalContent = document.querySelector('.modal'),
         modalCloseBtn = document.querySelector('[data-close]');
+
+  function modalsOpen() {
+    modalContent.classList.add('show');
+    modalContent.classList.remove('hide');
+    document.body.style.overflow = 'hidden';
+    clearTimeout(timeModals);
+  }
+
   modalOpenBtn.forEach(item => {
-    item.addEventListener('click', e => {
-      modalContent.classList.add('show');
-      modalContent.classList.remove('hide');
-      document.body.style.overflow = 'hidden';
-    });
+    item.addEventListener('click', modalsOpen);
   });
   modalCloseBtn.addEventListener('click', e => {
     modalContent.classList.add('hide');
     modalContent.classList.remove('show');
     document.body.style.overflow = '';
   });
+  const timeModals = setTimeout(modalsOpen, 3000);
 });
 
 /***/ })
