@@ -23,7 +23,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
             });
           }
-          hidenTabsContent();
+          
 
           function showTabsContent(i = 0) {
             tabsContent[i].classList.add('show', 'fade');
@@ -33,10 +33,8 @@ window.addEventListener('DOMContentLoaded', () => {
           }
 
 
-
           hidenTabsContent();
           showTabsContent();
-
 
           tabsParent.addEventListener('click', (event) => {
 
