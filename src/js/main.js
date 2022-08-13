@@ -10,7 +10,7 @@ window.addEventListener('DOMContentLoaded', () => {
           tabsContent = document.querySelectorAll('.tabcontent'),
           tabsParent = document.querySelector('.tabheader__items');
           
-
+jkhkjhjkh
    
 
           
