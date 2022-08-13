@@ -195,12 +195,20 @@ window.addEventListener('DOMContentLoaded', () => {
   modalOpenBtn.forEach(item => {
     item.addEventListener('click', modalsOpen);
   });
-  modalCloseBtn.addEventListener('click', e => {
+
+  function modalsClose() {
     modalContent.classList.add('hide');
     modalContent.classList.remove('show');
     document.body.style.overflow = '';
-  });
+  }
+
+  modalCloseBtn.addEventListener('click', modalsClose);
   const timeModals = setTimeout(modalsOpen, 3000);
+  document.addEventListener('keydown', e => {
+    if (e.code === "Escape" && modalContent.classList.contains('show')) {
+      modalsClose();
+    }
+  });
 });
 
 /***/ })
