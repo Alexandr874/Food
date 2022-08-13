@@ -156,8 +156,22 @@ window.addEventListener('DOMContentLoaded', () => {
 
           });
 
+          function showModlByScroll() {
+            if (window.scrollY + document.documentElement.clientHeight >= document.documentElement.scrollHeight) {
+              modalsOpen();
 
-          
+              window.removeEventListener('scroll', showModlByScroll);
+            }
+          }
+
+
+          window.addEventListener('scroll', showModlByScroll);
+           
+
+        
+
+
+
 
 
 
