@@ -129,7 +129,7 @@ window.addEventListener('DOMContentLoaded', () => {
           modalContent.classList.add('show');
           modalContent.classList.remove('hide');
           document.body.style.overflow = 'hidden';
-          clearTimeout(timeModals);
+          clearInterval(timeModals);
         }
 
 
